@@ -21,8 +21,8 @@ public class Character {
 
     //TODO: Create class for "Top right box", called Personality
 
-    //TODO: Create class for "Features and Traits", called Features
-
+    //Class for "Features and Traits", called Features
+    private Features features; //TODO: Finish setting up section.
 
     //TODO: Second page with backstory and stuff, called Biography
 
