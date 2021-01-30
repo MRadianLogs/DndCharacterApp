@@ -1,5 +1,8 @@
-package com.company;
+package com.company.Character;
 
+import com.company.DataValues.Ability;
+import com.company.Constants;
+import com.company.DataValues.Skill;
 import com.company.Util.ProficiencyBonusCalculator;
 
 import java.util.Dictionary;

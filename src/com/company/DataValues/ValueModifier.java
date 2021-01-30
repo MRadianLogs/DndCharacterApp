@@ -1,4 +1,4 @@
-package com.company;
+package com.company.DataValues;
 
 public class ValueModifier {
     private int modifierValue;

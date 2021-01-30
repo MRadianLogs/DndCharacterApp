@@ -1,12 +1,12 @@
-package com.company;
+package com.company.Character;
 
 public class BaseDetails {
     //Base Character Details
 
     private String ownerName;
-    private String race; //TODO: Make its own class.
-    private String characterClass; //TODO: Make its own class.
-    private String background; //TODO: Make its own class.
+    private String race; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
+    private String characterClass; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
+    private String background; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
     private String alignment;
     private int level;
     private int experiencePoints;

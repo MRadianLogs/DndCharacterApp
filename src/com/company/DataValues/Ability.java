@@ -1,4 +1,4 @@
-package com.company;
+package com.company.DataValues;
 
 import com.company.Util.ModifierCalculator;
 

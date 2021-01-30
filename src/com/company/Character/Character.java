@@ -1,6 +1,6 @@
-package com.company;
+package com.company.Character;
 
-import com.company.Util.ProficiencyBonusCalculator;
+import com.company.Constants;
 
 import java.util.*;
 
@@ -22,6 +22,7 @@ public class Character {
     //TODO: Create class for "Top right box", called Personality
 
     //TODO: Create class for "Features and Traits", called Features
+
 
     //TODO: Second page with backstory and stuff, called Biography
 

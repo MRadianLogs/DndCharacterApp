@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Character;
+
+import com.company.DataValues.ValueModifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +69,7 @@ public class EncounterDetails {
 
     public void setupEncounterDetails()
     {
+        //TODO: Fill in values based on character's data and Database related values.
         armorClassModifiers.clear();
         characterUsesOverriddenArmorClassValue = false;
         overriddenArmorClassValue = -1;

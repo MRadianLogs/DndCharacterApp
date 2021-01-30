@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.Character.Character;
+import com.company.Character.EncounterDetails;
+import com.company.DataValues.Ability;
+import com.company.DataValues.Skill;
+
 import java.util.*;
 
 public class Main {
@@ -117,6 +122,22 @@ public class Main {
         printSkillValue(skill);
     }
 
+    private static void printEncounterDetails(Character testCharacter) {
+        //Print AC, initiative mod, speed, Max hit points, current hit points, temp hit points,
+        //num available hit dice, hit dice type, successful death saves, failed death saves.
+        EncounterDetails characterEncounterDetails = testCharacter.getEncounterDetails();
+
+        System.out.println("AC: " + characterEncounterDetails.getArmorClassValue());
+        System.out.println("Initiative Mod.: " + characterEncounterDetails.getInitiativeValue());
+        System.out.println("Speed: " + characterEncounterDetails.getSpeedValue());
+        System.out.println("Max Hit Points:" + characterEncounterDetails.getMaxHitPoints());
+        System.out.println("Current Hit Points: " + characterEncounterDetails.getCurrentHitPoints());
+        System.out.println("Num. Hit Dice: " + characterEncounterDetails.getMaxHitDice());
+        System.out.println("Hit dice: " + characterEncounterDetails.getHitDiceType());
+        System.out.println("Success Death saves: " + characterEncounterDetails.getNumSuccessDeathSaves());
+        System.out.println("Failed Death saves: " + characterEncounterDetails.getNumFailedDeathSaves());
+    }
+
     public static void main(String[] args) {
         Character testCharacter = new Character("Michael", "Human", "Fighter",
                 "Folk hero", "Neutral Good", 5, 14477, "Metro Aran",
@@ -136,6 +157,9 @@ public class Main {
         printSavingThrowValues(testCharacter);
         System.out.println();
         printSkillValues(testCharacter);
+        System.out.println();
+        printEncounterDetails(testCharacter);
+
 //        Character testCharacter = new Character("Ann", "Human", "Fighter",
 //                "Folk hero", "Neutral Good", 1, 200, "Commander Shepard",
 //                new ArrayList<>(Arrays.asList(16, 18, 14, 11, 10, 9)),
