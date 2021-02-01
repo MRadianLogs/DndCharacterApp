@@ -9,6 +9,9 @@ public class Feature {
     private String origin; //Ex: Race, Background, Etc.
     private int levelCap; // -1 if not applicable.
 
+    //TODO: Need to account for features affecting skills, abilities, proficiencies, tools, health, temp health,
+    // additional actions, bonus actions, etc..
+
     private boolean hasLimitedUsages; //Used "once per short/long rest" "3 times per short/long rest"
     private int maxNumUsages;
     private int numUsagesLeft;
