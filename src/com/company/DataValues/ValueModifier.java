@@ -1,6 +1,7 @@
 package com.company.DataValues;
 
 public class ValueModifier {
+    private String statToModify; //Skill name, ability name, etc..
     private int modifierValue;
     private String reason; //Ex. Race, class, ...
 
