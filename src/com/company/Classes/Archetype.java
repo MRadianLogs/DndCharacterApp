@@ -1,23 +1,18 @@
-package com.company.Backgrounds;
+package com.company.Classes;
 
 import com.company.DataValues.Feature;
-import com.company.DataValues.Item;
 
-import java.util.List;
 import java.util.Map;
 
-public class Background {
+public class Archetype {
     private String name;
     private String description;
-    private Map<String, Feature> features;
+    private Map<String, Feature> features; //Features for character brought by this Archetype.
 
-    private List<Item> startingEquipment;
-
-    public Background(String name, String description, Map<String, Feature> features, List<Item> startingEquipment) {
+    public Archetype(String name, String description, Map<String, Feature> features) {
         this.name = name;
         this.description = description;
         this.features = features;
-        this.startingEquipment = startingEquipment;
     }
 
     public String getName() {
@@ -42,13 +37,5 @@ public class Background {
 
     public void setFeatures(Map<String, Feature> features) {
         this.features = features;
-    }
-
-    public List<Item> getStartingEquipment() {
-        return startingEquipment;
-    }
-
-    public void setStartingEquipment(List<Item> startingEquipment) {
-        this.startingEquipment = startingEquipment;
     }
 }

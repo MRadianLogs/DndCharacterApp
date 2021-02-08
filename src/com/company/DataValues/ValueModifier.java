@@ -11,6 +11,9 @@ public class ValueModifier {
         this.reason = reason;
     }
 
+    public String getStatToModify() { return statToModify; }
+    public void setStatToModify(String statToModify) { this.statToModify = statToModify; }
+
     public int getModifierValue() {
         return modifierValue;
     }

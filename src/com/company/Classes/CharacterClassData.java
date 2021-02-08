@@ -4,28 +4,26 @@ import com.company.DataValues.Feature;
 import com.company.DataValues.Item;
 
 import java.util.List;
-import java.util.Map;
 
 /**
- * This class represents the players chosen class and related features in Dnd.
+ * This class represents a class in Dnd. This object represents a row/data object in a database CharacterClass table.
  */
-public class CharacterClass {
-
+public class CharacterClassData {
     private String name;
     private String description;
 
-    private Map<String, Feature> features; //Features for character brought by this class.
+    private List<Feature> features; //Features for character brought by this class.
 
-    private Archetype archetype; //The players chosen archetype.
+    private List<ArchetypeData> archetypes; //A list of possible archetypes for this class.
 
     private String hitDiceType;
     private List<Item> startingEquipmentList;
 
-    public CharacterClass(String name, String description, Map<String, Feature> features, Archetype archetype, String hitDiceType, List<Item> startingEquipmentList) {
+    public CharacterClassData(String name, String description, List<Feature> features, List<ArchetypeData> archetypes, String hitDiceType, List<Item> startingEquipmentList) {
         this.name = name;
         this.description = description;
         this.features = features;
-        this.archetype = archetype;
+        this.archetypes = archetypes;
         this.hitDiceType = hitDiceType;
         this.startingEquipmentList = startingEquipmentList;
     }
@@ -46,20 +44,20 @@ public class CharacterClass {
         this.description = description;
     }
 
-    public Map<String, Feature> getFeatures() {
+    public List<Feature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(Map<String, Feature> features) {
+    public void setFeatures(List<Feature> features) {
         this.features = features;
     }
 
-    public Archetype getArchetype() {
-        return archetype;
+    public List<ArchetypeData> getArchetypes() {
+        return archetypes;
     }
 
-    public void setArchetype(Archetype archetype) {
-        this.archetype = archetype;
+    public void setArchetypes(List<ArchetypeData> archetypes) {
+        this.archetypes = archetypes;
     }
 
     public String getHitDiceType() {

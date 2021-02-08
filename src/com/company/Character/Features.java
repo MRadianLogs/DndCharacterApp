@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Features {
+    //TODO: Use classes from BaseDetails.
     private Map<String, Feature> classFeatures;
     private Map<String, Feature> raceFeatures;
     private Map<String, Feature> backgroundFeatures;

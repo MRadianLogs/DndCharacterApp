@@ -4,16 +4,15 @@ import com.company.DataValues.Feature;
 import com.company.DataValues.Item;
 
 import java.util.List;
-import java.util.Map;
 
-public class Background {
+public class BackgroundData {
     private String name;
     private String description;
-    private Map<String, Feature> features;
+    private List<Feature> features;
 
     private List<Item> startingEquipment;
 
-    public Background(String name, String description, Map<String, Feature> features, List<Item> startingEquipment) {
+    public BackgroundData(String name, String description, List<Feature> features, List<Item> startingEquipment) {
         this.name = name;
         this.description = description;
         this.features = features;
@@ -36,11 +35,11 @@ public class Background {
         this.description = description;
     }
 
-    public Map<String, Feature> getFeatures() {
+    public List<Feature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(Map<String, Feature> features) {
+    public void setFeatures(List<Feature> features) {
         this.features = features;
     }
 
