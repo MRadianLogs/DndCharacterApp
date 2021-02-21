@@ -1,9 +1,7 @@
 package com.company.Classes;
 
 import com.company.DataValues.Feature;
-import com.company.DataValues.Item;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,21 +11,21 @@ public class CharacterClass {
 
     private String name;
     private String description;
+    private int level;
 
     private Map<String, Feature> features; //Features for character brought by this class.
 
     private Archetype archetype; //The players chosen archetype.
 
     private String hitDiceType;
-    private List<Item> startingEquipmentList;
 
-    public CharacterClass(String name, String description, Map<String, Feature> features, Archetype archetype, String hitDiceType, List<Item> startingEquipmentList) {
+    public CharacterClass(String name, String description, int level, Map<String, Feature> features, Archetype archetype, String hitDiceType) {
         this.name = name;
         this.description = description;
+        this.level = level;
         this.features = features;
         this.archetype = archetype;
         this.hitDiceType = hitDiceType;
-        this.startingEquipmentList = startingEquipmentList;
     }
 
     public String getName() {
@@ -44,6 +42,14 @@ public class CharacterClass {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public Map<String, Feature> getFeatures() {
@@ -68,13 +74,5 @@ public class CharacterClass {
 
     public void setHitDiceType(String hitDiceType) {
         this.hitDiceType = hitDiceType;
-    }
-
-    public List<Item> getStartingEquipmentList() {
-        return startingEquipmentList;
-    }
-
-    public void setStartingEquipmentList(List<Item> startingEquipmentList) {
-        this.startingEquipmentList = startingEquipmentList;
     }
 }

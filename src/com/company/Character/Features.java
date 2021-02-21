@@ -6,26 +6,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Features {
-    //TODO: Use classes from BaseDetails.
+    //Uses classes from BaseDetails.
     private Map<String, Feature> classFeatures;
     private Map<String, Feature> raceFeatures;
     private Map<String, Feature> backgroundFeatures;
     private Map<String, Feature> customFeatures;
 
-    public Features()
+    public Features(BaseDetails baseDetails)
     {
-        classFeatures = new HashMap<>();
-        raceFeatures = new HashMap<>();
-        backgroundFeatures = new HashMap<>();
+        classFeatures = baseDetails.getCharacterClass().getFeatures();
+        raceFeatures = baseDetails.getRace().getFeatures();
+        backgroundFeatures = baseDetails.getBackground().getFeatures();
         customFeatures = new HashMap<>();
-    }
-
-    public void setupFeatures()
-    {
-        classFeatures.clear();
-        raceFeatures.clear();
-        backgroundFeatures.clear();
-        customFeatures.clear();
     }
 
     public void addClassFeature(Feature newFeature)

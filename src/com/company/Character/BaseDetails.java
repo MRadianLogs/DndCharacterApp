@@ -1,12 +1,16 @@
 package com.company.Character;
 
+import com.company.Backgrounds.Background;
+import com.company.Classes.CharacterClass;
+import com.company.Races.Race;
+
 public class BaseDetails {
     //Base Character Details
 
     private String ownerName;
-    private String race; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
-    private String characterClass; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
-    private String background; //TODO: DESIGN/OPTIMIZATION: Consider changing this type to the class. There may not be a need though.
+    private Race race;
+    private CharacterClass characterClass;
+    private Background background;
     private String alignment;
     private int level;
     private int experiencePoints;
@@ -16,13 +20,37 @@ public class BaseDetails {
                        String background, String alignment, int level,
                        int experiencePoints, String name) {
         this.ownerName = ownerName;
-        this.race = race;
-        this.characterClass = characterClass;
-        this.background = background;
+
+        this.race = setupRace(race);
+
+        this.characterClass = setupCharacterClass(characterClass);
+
+        this.background = setupBackground(background);
         this.alignment = alignment;
         this.level = level;
         this.experiencePoints = experiencePoints;
         this.name = name;
+    }
+
+    private Race setupRace(String selectedRace)
+    {
+        //TODO:Get race from DB, if it exists.
+        Race newRace = null;
+        return newRace;
+    }
+
+    private CharacterClass setupCharacterClass(String selectedCharacterClass)
+    {
+        //TODO:Get characterClass from DB, if it exists.
+        CharacterClass characterClass = null;
+        return characterClass;
+    }
+
+    private Background setupBackground(String selectedBackground)
+    {
+        //TODO:Get background from DB, if it exists.
+        Background background = null;
+        return background;
     }
 
     public String getOwnerName() {
@@ -32,26 +60,14 @@ public class BaseDetails {
         this.ownerName = ownerName;
     }
 
-    public String getRace() {
-        return race;
-    }
-    public void setRace(String race) {
-        this.race = race;
-    }
+    public Race getRace() { return race; }
+    public void setRace(Race race) { this.race = race; }
 
-    public String getCharacterClass() {
-        return characterClass;
-    }
-    public void setCharacterClass(String characterClass) {
-        this.characterClass = characterClass;
-    }
+    public CharacterClass getCharacterClass() { return characterClass; }
+    public void setCharacterClass(CharacterClass characterClass) { this.characterClass = characterClass; }
 
-    public String getBackground() {
-        return background;
-    }
-    public void setBackground(String background) {
-        this.background = background;
-    }
+    public Background getBackground() { return background; }
+    public void setBackground(Background background) { this.background = background; }
 
     public String getAlignment() {
         return alignment;
